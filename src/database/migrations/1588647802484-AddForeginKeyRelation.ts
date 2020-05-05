@@ -9,7 +9,7 @@ export default class AddForeginKeyRelation1588647802484
         name: 'TransactionCategory',
         columnNames: ['category_id'],
         referencedColumnNames: ['id'],
-        referencedTableName: 'categorys',
+        referencedTableName: 'categories',
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       }),
