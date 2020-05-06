@@ -21,14 +21,14 @@ class Transaction {
   @Column()
   type: 'income' | 'outcome';
 
-  @Column('numeric')
+  @Column('integer')
   value: number;
 
   @JoinColumn({ name: 'category_id' })
-  @ManyToOne(() => Category, category => category.transactions)
+  @ManyToOne(() => Category, category => category.transactions, { eager: true })
   category: Category;
 
-  @Column()
+  @Column('uuid ')
   category_id: string;
 
   @CreateDateColumn()
